@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - AccountKeep</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body class="@ViewData["BodyClass"]">
+    <div class="d-flex flex-column min-vh-100">
+        <header>
+            <!-- NAVBAR -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+                <div class="container-fluid">
+                    <!-- Brand -->
+                    <a class="navbar-brand fw-bold" asp-controller="Home" asp-action="Index">
+                        AccountKeep
+                    </a>
+
+                    <!-- Mobile toggle -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Menu -->
+                    <div class="collapse navbar-collapse" id="mainNavbar">
+                        <!-- Left links -->
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Home" asp-action="About">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Home" asp-action="Contact">Contact</a>
+                            </li>
+                        </ul>
+
+                        <!-- Right links -->
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link fw-semibold" asp-controller="Persons" asp-action="Index">
+                                    Login / Persons
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- MAIN CONTENT -->
+        <main class="flex-fill">
+            <div class="container mt-3">
+                @RenderBody()
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer mt-auto py-3 bg-dark text-white">
+            <div class="container text-center">
+                &copy; 2026 AccountKeep. All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

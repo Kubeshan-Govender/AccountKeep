@@ -1,0 +1,24 @@
+# Build artifacts
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+
+# Visual Studio cache
+.vs/
+
+# Publish folder
+publish/
+
+# Rider IDE
+.idea/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+
+# Entity Framework
+*.db

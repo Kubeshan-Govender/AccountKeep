@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="login-bg d-flex justify-content-center align-items-center">
+    <div class="login-overlay text-white">
+        <h1 class="welcome-title text-center mb-4">Login to AccountKeep</h1>
+
+        <form method="post">
+            <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input name="username" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input name="password" type="password" class="form-control" />
+            </div>
+
+            <button type="submit" class="btn btn-success w-100">Login</button>
+
+            @if (ViewBag.Error != null)
+            {
+                <p class="text-danger mt-2 text-center">@ViewBag.Error</p>
+            }
+        </form>
+    </div>
+</div>

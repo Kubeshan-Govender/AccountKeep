@@ -1,0 +1,160 @@
+﻿.navbar-brand {
+    letter-spacing: 0.5px;
+}
+
+footer {
+    font-size: 0.9rem;
+}
+
+/* Welcome text styling */
+.welcome-overlay {
+    background: rgba(255, 255, 255, 0.85); /* frosted glass look */
+    padding: 3rem 4rem;
+    border-radius: 12px;
+    display: inline-block;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    border-top: 6px solid #006d6f;
+}
+
+.welcome-title {
+    color: #006d6f;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.welcome-subtitle {
+    color: #374151;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+.welcome-container {
+    text-align: center;
+    max-width: 800px;  /* keeps text from being too wide */
+    margin: 0 auto;
+}
+
+.home-bg {
+    background-image: url('../images/finance-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: white;
+}
+
+.about-bg {
+    background-image: url('../images/Laptop.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: white;
+}
+
+.contact-bg {
+    background-image: url('../images/Desktop.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: white;
+}
+
+/* Optional: ensure links are visible */
+.about-bg a,
+.contact-bg a {
+    color: #00bfa5; /* a teal accent for links */
+}
+
+.about-bg a:hover,
+.contact-bg a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+.text-container {
+    background-color: rgba(0, 0, 0, 0.6); /* dark semi-transparent */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    color: white; /* ensures text is visible */
+    max-width: 800px; /* limits width for readability */
+    margin: 50px auto; /* center horizontally and add top spacing */
+}
+
+
+/* Full-screen background */
+.login-bg
+{
+    background-image: url('../images/login-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: white;
+}
+
+/* Overlay card for the form */
+.login-overlay {
+    background-color: rgba(0, 109, 111, 0.85); /* teal with opacity */
+    color: white;
+    max-width: 400px;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+
+}
+    .login-overlay:hover {
+        transform: translateY(-5px);
+        transition: transform 0.3s ease;
+    }
+
+    .login-overlay h1.welcome-title {
+        color: white;
+    }
+
+/* Full-page background */
+body {
+    background: url('/images/contact-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+}
+
+/* Dark overlay panel */
+.contact-overlay {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(30, 30, 30, 0.85); /* dark grey / almost black */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+}
+
+    .contact-overlay p {
+        font-size: 1.1em;
+        margin-bottom: 1rem;
+        color: #fff; /* light text for contrast */
+    }
+
+    .contact-overlay a {
+        color: #1e90ff; /* bright blue links */
+        text-decoration: none;
+    }
+
+        .contact-overlay a:hover {
+            text-decoration: underline;
+        }

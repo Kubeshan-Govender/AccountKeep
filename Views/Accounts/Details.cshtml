@@ -1,0 +1,42 @@
+﻿@model IEnumerable<AccountKeep.Models.Account>
+
+<h2>Accounts for @ViewBag.PersonName</h2>
+
+<div class="mb-3 d-flex justify-content-between align-items-center">
+    <a asp-action="Create" asp-route-personId="@ViewBag.PersonId" class="btn btn-success">
+        <i class="bi bi-plus-lg"></i> Add New Account
+    </a>
+
+    <a asp-controller="Persons" asp-action="Index" class="btn btn-secondary">
+        <i class="bi bi-arrow-left"></i> Back to Persons
+    </a>
+</div>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Account Number</th>
+            <th>Type</th>
+            <th>Balance</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var account in Model)
+        {
+            <tr>
+                <td>@account.AccountNumber</td>
+                <td>@account.AccountType</td>
+                <td>@account.Balance</td>
+                <td>@account.Status</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@account.AccountId" class="btn btn-sm btn-primary" title="Edit">
+                        <i class="bi bi-pencil"></i>
+                    </a>
+                    <a asp-controller="Transactions" asp-action="Details" asp-route-accountId="@account.AccountId" class="btn btn-sm btn-info">Transactions</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
