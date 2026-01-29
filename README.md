@@ -1,86 +1,57 @@
-AccountKeep
+# AccountKeep
 
-AccountKeep is a web-based application for managing financial accounts and transactions. It allows users to:
+**AccountKeep** is a web application for managing financial accounts and transactions.  
+It allows users to create accounts, manage transactions, and view account details securely.
 
-Create and manage persons and their accounts
+## Features
 
-Record, edit, and delete transactions
+- Manage persons and their accounts  
+- Add, edit, and delete transactions  
+- Automatic account balance updates  
+- Responsive UI built with Bootstrap  
+- Login functionality for secure access  
 
-View account details and transaction history
+## Setup Instructions
 
-Securely log in and access account information
+### Prerequisites
 
-Features
+- [Visual Studio 2022](https://visualstudio.microsoft.com/) or later  
+- [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)  
+- [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)  
 
-User Management: Add, edit, and manage persons.
+### Steps to Run
 
-Account Management: Open or close accounts, view balances.
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/YourUsername/AccountKeep.git
+2. **Open the project**  
+   Open AccountKeep.sln in Visual Studio.
+   
+3. **Configure the database**  
+   Update the connection string in appsettings.json to your SQL Server instance.
+   Run the SQL scripts in /DatabaseScripts to create tables and insert sample data.
 
-Transaction Management: Add, edit, delete transactions with automatic balance updates.
-
-Responsive UI: Built with Bootstrap, optimized for desktops and tablets.
-
-Secure Login: Basic login functionality with username/password.
-
-Getting Started
-
-These instructions will help you set up the project on your local machine.
-
-Prerequisites
-
-Visual Studio 2022
- or later
-
-.NET 8 SDK
-
-SQL Server
-
-(Optional) Git
-
-Setup
-
-Clone the repository:
-
-git clone https://github.com/YourUsername/AccountKeep.git
+3. **Run the application**  
+   Press F5 in Visual Studio or run:
+   ```bash
+   dotnet run
+4. **Navigate** 
+   to https://localhost:5001 (or the port shown) in your browser.
 
 
-Open in Visual Studio:
+## Folder Structure
 
-Open AccountKeep.sln.
-
-Configure the Database:
-
-Update the connection string in appsettings.json to point to your SQL Server instance.
-
-Ensure the database exists, or use the provided scripts in /DatabaseScripts to create tables and sample data.
-
-Build and Run:
-
-Press F5 in Visual Studio or run:
-
-dotnet run
-
-
-The app should open in your default browser.
-
-Folder Structure
-
-/Controllers – ASP.NET Core MVC controllers
-
+/Controllers – MVC controllers
 /Models – Data models (Account, Person, Transaction, User)
-
 /Views – Razor views for the UI
+/wwwroot – CSS, JS, and images
+/Services – Business logic and data access
+/Interfaces – Service interfaces
 
-/wwwroot – CSS, JS, images
+## Notes
 
-/Services – Business logic and data access services
+Home, About, and Login pages have background images and overlay effects.
 
-/Interfaces – Service interfaces for dependency injection
+Uses Bootstrap 5.3 and Bootstrap Icons for styling.
 
-Notes
-
-Bootstrap & Icons: The app uses Bootstrap 5.3 and Bootstrap Icons for styling.
-
-Backgrounds & Themes: Home, About, and Login pages have dedicated background images and overlays.
-
-Database Initialization: Use the SQL script in /DatabaseScripts to populate sample accounts, persons, and transactions.
+Transaction rules ensure data consistency (no zero-amount or future transactions).
