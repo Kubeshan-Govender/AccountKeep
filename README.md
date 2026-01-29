@@ -41,12 +41,12 @@ It allows users to create accounts, manage transactions, and view account detail
 
 ## Folder Structure
 
-/Controllers – MVC controllers
-/Models – Data models (Account, Person, Transaction, User)
-/Views – Razor views for the UI
-/wwwroot – CSS, JS, and images
-/Services – Business logic and data access
-/Interfaces – Service interfaces
+- /Controllers – MVC controllers
+- /Models – Data models (Account, Person, Transaction, User)
+- /Views – Razor views for the UI
+- /wwwroot – CSS, JS, and images
+- /Services – Business logic and data access
+- /Interfaces – Service interfaces
 
 ## Notes
 
